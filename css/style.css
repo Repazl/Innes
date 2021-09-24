@@ -162,7 +162,7 @@ header {
 		.cf { zoom:1 } 
 			*/
 
-			#gallery .list img {
+			#gallery .list a {
 				padding: 3px;
 				border: 5px solid #8CA583;
 				background-color: #F2F2E8;
@@ -172,8 +172,13 @@ header {
 				object-fit: cover;
 				margin: 10px 1% ;
 			}
-			
 
+
+.link img {
+	
+	width: 50px;
+	height:50px;
+}
 
 
 
@@ -189,6 +194,9 @@ footer {
 }
 footer a {text-decoration: none;}
 footer .pr {display: block;}
+
+
+
 
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
@@ -209,9 +217,6 @@ body.is-fixed-pagetop .nav-fix-pos-pagetop a {
 	body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
 		background: #999;	/*マウスオン時の背景色*/
 	}
-
-
-
 
 
 /*その他
@@ -300,7 +305,7 @@ header #logo img {
 
 /*WORK============*/
 	
-.
+
 	
 	
 	
