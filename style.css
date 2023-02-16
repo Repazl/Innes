@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+/*全端末共通設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+body,html {width: 100%;height: 100%;}
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #666;
+	font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 15px;
+	line-height: 2;
+	background: #fff url(../images/bg.jpg) repeat center center/150px;
+	-webkit-text-size-adjust: none;
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+ul {list-style-type: none;}
+ol {padding-left: 40px;padding-bottom: 15px;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+iframe {width: 100%;}
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+	color: #666;
+	transition: 0.4s;
+	text-decoration: none;
+}
+a:hover {
+	opacity: 0.6 ;		/*透明度*/
+	text-decoration: none;	
+}
+
+/*container
+---------------------------------------------------------------------------*/
+#container {
+	width: 100%;height: 100%;
+}
+
+/*トプ画
+---------------------------------------------------------------------------*/
+#mainimg {
+	text-indent: -9999px;
+	position: fixed;top: 0px;z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg_main_s.png) no-repeat right bottom;
+	background: url(../images/bg_dot.png) no-repeat left top / 60%, url(../images/bg_main.png) no-repeat right bottom / cover;
+}
+
+/*ヘッダー
+---------------------------------------------------------------------------*/
+
+header {
+	height: 95%;
+}
+
+
+/*コンテンツ
+---------------------------------------------------------------------------*/
+/*コンテンツ共通*/
+.contents {
+	overflow: hidden;
+	padding: 0 15%	50px 15%;	/*余白。上、右、下、左。*/
+}
+/*bg1==================*/
+.contents.bg1 {
+	background-color:#D5D7E6;
+	
+}
+/*bg2==================*/
+.contents.bg2 {
+	background-color:#D7D0C6;
+	
+}
+/*bg3==================*/
+.contents.bg3 {
+	background-color:#CED9D0;
+}
+/*bg4==================*/
+.contents.bg4 {
+	background-color:#D0D0DA;
+}
+/*bg5==================*/
+.contents.bg5 {
+	background-color:#E8F7EE;
+}
+/*h2見出し*/
+.contents h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+	text-align: center;
+	letter-spacing: 0.2em;
+	color: #333;
+}
+/*h2見出しの上の装飾*/
+.contents h2::before {
+	content: "*+ﾟ";	
+	display: block;
+	text-shadow: 20px 10px 0px rgba(255,255,255,0.5);
+}
+/*h2見出し内のspanタグ*/
+.contents h2 span {
+	display: block;
+	font-size: 12px;	/*文字サイズ*/
+}
+/*h3見出し*/
+.contents h3 {
+	clear: both;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	letter-spacing: 0.1em;
+	background: #fff;
+	background: rgba(255,255,255,0.3);
+	text-align: center;
+	border-radius: 30px;
+	padding: 0px 20px;
+}
+/*段落タグ*/
+.contents p {
+	padding: 0 30px 20px;		/*上、左右、下への余白*/
+}
+/*段落タグが続いた場合の設定*/
+.contents p + p {
+	margin-top: -5px;	/*続いた段落タグを上に詰める設定*/
+}
+
+/*インラインブロック*/
+.gazo {
+	float: left;
+	width: 46%;	/*画像幅*/
+	margin: 10px 2% ;	/*上、左右への画像外側のスペース*/
+	
+
+}
+
+.cardTitle{
+	font-weight:bold;
+
+}
+.cardRole{
+	color:#999;
+}
+
+
+
+/*Galleryブロック設定
+---------------------------------------------------------------------------*/
+/*画像*/
+
+/*.cf::after {
+	content:"";
+	display:table;
+	clear:both;
+	}
+	
+.cf:before, .cf:after {
+	content:"";
+	display:table
+	}
+	.cf:after { clear:both }
+		.cf { zoom:1 } 
+			*/
+
+			#gallery .list a {
+				padding: 3px;
+				border: 5px solid #8CA583;
+				background-color: #F2F2E8;
+				float: left ;
+				width: 28%;
+				height:200px;
+				object-fit: cover;
+				margin: 10px 1% ;
+			}
+
+
+.link img {
+	
+	width: 50px;
+	height:50px;
+}
+
+
+
+
+/*フッター設定
+---------------------------------------------------------------------------*/
+footer {
+	display: block;
+	clear: both;
+	text-align: center;
+	padding: 20px;
+				background-color:#F4F4F4;
+}
+footer a {text-decoration: none;}
+footer .pr {display: block;}
+
+
+
+
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+body .nav-fix-pos-pagetop a {
+	display: none;
+}
+body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
+		width: 60px;
+		line-height: 60px;
+		bottom: 50px;
+		right: 3%;
+		background: #555;
+		background: rgba(0,0,0,0.5);	/*R,G,B,背景色*/
+		color: #fff;		/*文字色*/
+		border-radius: 50%;	/*円形にする指定*/
+	}
+	body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
+		background: #999;	/*マウスオン時の背景色*/
+	}
+
+
+/*その他
+---------------------------------------------------------------------------*/
+.look {background: #c3b5a2;background: rgba(0,0,0,0.1);padding: 5px 10px;border-radius: 4px;}
+.mb15,.mb1em {margin-bottom: 15px !important;}
+.mb30 {margin-bottom: 30px !important;}
+.mb50 {margin-bottom: 50px !important;}
+.p0 {padding:0 !important;}
+.clear {clear: both;}
+ul.disc {padding: 0em 25px 15px;list-style: disc;}
+.color1, .color1 a {color: #cd6052 !important;}
+.pr {font-size: 10px;}
+.wl {width: 96%;}
+.ws {width: 50%;}
+.c {text-align: center;}
+.r {text-align: right;}
+.l {text-align: left;}
+.w50 {overflow: hidden;width: 50%;}
+.fl {float: left;}
+.fr {float: right;}
+.big1 {font-size: 50px;}
+.mini1 {font-size: 11px;display: inline-block;line-height: 1.5;}
+.sh {display: none;}
+
+
+
+/*画面幅800px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+
+/*その他
+---------------------------------------------------------------------------*/
+body.s-n #sub,body.s-n #footermenu,.m-n {display: none;}
+.big1 {font-size: 24px;}
+.w50 {overflow: hidden;width: auto;}
+.fl {float: none;}
+.fr {float: none;}
+
+}
+
+
+
+/*画面幅480px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:480px){
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+body {
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+/*ヘッダー
+---------------------------------------------------------------------------*/
+/*ロゴ画像*/
+header #logo img {
+	position: fixed;
+	left: 2%;
+	top: 10px;
+}
+
+
+/*コンテンツ
+---------------------------------------------------------------------------*/
+/*コンテンツ共通*/
+.contents {
+	padding: 0 4% 90px 4%;	/*ボックス内の余白。上、右、下、左。*/
+}
+/*h2見出し*/
+.contents h2 {
+	font-size: 20px;
+	letter-spacing: normal;
+}
+/*h2見出し内のspanタグ*/
+.contents h2 span {
+	font-size: 10px;
+}
+	
+	
+/*段落タグ*/
+.contents p {
+	padding: 0 0 20px;
+}
+
+/*WORK============*/
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*テーブル（ta1）
+---------------------------------------------------------------------------*/
+/*ta1設定*/
+.ta1, .ta1 td, .ta1 th {
+	padding: 5px;
+}
+/*ta1の左側ボックス*/
+.ta1 th {
+	width: 100px;
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.ws,.wl {width: 94%;}
+.big1 {font-size: 16px;}
+.sh {display:block;}
+.pc {display:none;}
+
+}
