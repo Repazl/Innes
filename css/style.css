@@ -85,6 +85,10 @@ header {
 .contents.bg4 {
 	background-color:#D0D0DA;
 }
+/*bg5==================*/
+.contents.bg5 {
+	background-color:#E8F7EE;
+}
 /*h2見出し*/
 .contents h2 {
 	font-size: 40px;
