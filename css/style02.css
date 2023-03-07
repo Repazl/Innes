@@ -76,6 +76,12 @@ a:hover {
 	background: url(../images/an_usa/an_usa.png) no-repeat center center / cover;
 }
 
+.header.an_banner {
+	background: url(../images/Banner/banner_puniru.png) no-repeat center center / cover;
+}
+
+
+
 /*コンテナー
 ---------------------------------------------------------------------------*/
 #container {
