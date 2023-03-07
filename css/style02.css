@@ -49,7 +49,7 @@ a:hover {
 /*ヘッダー
 ---------------------------------------------------------------------------*/
 .header {
-	height: 100%;
+	height: 80%;
 	overflow: auto;
 	position: relative;
 }
@@ -67,8 +67,14 @@ a:hover {
 .header.tnpp {
 	background: url(../images/tnpp/tnpp.png) no-repeat center center / cover;
 }	
+
+.header.aotl {
+	background: url(../images/aotl/top_legacy.webp) no-repeat center center / cover;
+}
 	
-	
+.header.an_usa {
+	background: url(../images/an_usa/an_usa.png) no-repeat center center / cover;
+}
 
 /*コンテナー
 ---------------------------------------------------------------------------*/
@@ -161,6 +167,17 @@ a:hover {
 	text-align: center;
 }
 
+/*埋め込み動画用
+---------------------------------------------------------------------------*/
+.gazo {
+	float: center;
+	width: 46%;	/*画像幅*/
+	margin: 10px 2% ;	/*上、左右への画像外側のスペース*/
+	
+	
+}
+
+			
 /*コード設定
 ---------------------------------------------------------------------------*/
 .code {
@@ -176,28 +193,18 @@ a:hover {
 .prettyprint{
 	height:20em;
 }*/
-/*フッター
+			
+/*フッター設定
 ---------------------------------------------------------------------------*/
 footer {
+	display: block;
 	clear: both;
 	text-align: center;
 	padding: 20px;
-	font-size: 85%;
-	background: url(../images/bg.jpg);	/*背景画像（古いブラウザ用）*/
-	background: url(../images/bg.jpg) repeat center top/ 12%;	/*背景画像*/
 }
-footer a {
-	color: #000;
-	text-decoration: none;
-}
-/*-----マウスオン時-----*/
-footer a:hover {
-	color: #666;
-}
-footer .pr {
-	display: block;
-	font-size: 80%;
-}
+footer a {text-decoration: none;}
+footer .pr {display: block;}
+
 
 
 /*PAGE TOP（↑）設定
@@ -209,12 +216,12 @@ body.is-fixed-pagetop .nav-fix-pos-pagetop a {
 	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
 	width: 60px;		/*ボタンの幅*/
 	line-height: 60px;	/*ボタンの高さ*/
-	bottom: 50px;		/*画面の下からの配置場所指定*/
-	right: 3%;			/*画面の右からの配置場所指定*/
+	bottom: 60px;		/*画面の下からの配置場所指定*/
+	right: 60px;			/*画面の右からの配置場所指定*/
 	background: #555;	/*背景色（古いブラウザ用）*/
 	background: rgba(0,0,0,0.5);	/*R,G,B,背景色*/
 	color: #fff;		/*文字色*/
-	border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
+	border-radius: 50%;	/*円形にする指定。削除すると正方形。*/
 }
 body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
 	background: #999;	/*マウスオン時の背景色*/
@@ -228,9 +235,9 @@ body .home a {
 body.is-fixed-pagetop .home a {
 	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
 		position:fixed;
-		left:40px;
-		top:40px;
-		width: 5%;
+		left:18px;
+		top:18px;
+		width: 50px;
 		transition:0.4s;
 		opacity:1;
 	}
