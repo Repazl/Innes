@@ -13,10 +13,45 @@ body {
 	font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 15px;
 	line-height: 2;
-	background: #fff url(../images/bg.jpg) repeat center center/150px;
-	-webkit-text-size-adjust: none;
+	background-color: F4F7F6;
 }
-h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+h2 {
+	margin-top: 32px;
+	margin-bottom: 4px;
+	
+	text-align: left;
+	letter-spacing: 0.2em;
+	color: #333;
+	display: block;
+	font-size: 32px;
+	
+}
+
+span{
+	margin-left: 5px;
+}
+
+
+h2:after {
+	content: "";
+	display: block;
+	
+	height: 2px;
+	background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+	background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+
+h3 {
+	clear: both;
+	margin-top: 24px;
+	margin-bottom: 20px;
+	letter-spacing: 0.1em;
+	
+	text-align: center;
+	border-radius: 30px;
+	padding: 0px 20px;
+}
 ul {list-style-type: none;}
 ol {padding-left: 40px;padding-bottom: 15px;}
 img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
@@ -41,88 +76,69 @@ a:hover {
 	width: 100%;height: 100%;
 }
 
-/*トプ画
----------------------------------------------------------------------------*/
-#mainimg {
-	text-indent: -9999px;
-	position: fixed;top: 0px;z-index: -1;
-	width: 100%;
-	height: 100%;
-	background: url(../images/bg_main_s.png) no-repeat right bottom;
-	background: url(../images/bg_dot.png) no-repeat left top / 60%, url(../images/bg_main.png) no-repeat right bottom / cover;
-}
+
 
 /*ヘッダー
 ---------------------------------------------------------------------------*/
-
 header {
-	height: 80%;
+	display: flex;
+	width: 100%;
+	height: 64px;
+	background-color: #ffffff;
+	 opacity: 0.9;
+	align-items: center;
+	position: fixed;
+	
+	nav{
+		
+		padding: 32px 0 16px 50%;
+		justify-content: start;
+		
+	}
+	
+
+.title {
+	margin-right: auto;
 }
 
+.menu-item {
+	list-style: none;
+	display: inline-block;
+	padding: 12px;
+		
+}
+	.menu-group{
+		display: flex;
+		
+		align-items: center;
+		padding: 0 80px;
+	}
+
+	
+}
 
 /*コンテンツ
 ---------------------------------------------------------------------------*/
 /*コンテンツ共通*/
 .contents {
 	overflow: hidden;
-	padding: 0 15%	50px 15%;	/*余白。上、右、下、左。*/
-}
-/*bg1==================*/
-.contents.bg1 {
-	background-color:#D5D7E6;
-	
-}
-/*bg2==================*/
-.contents.bg2 {
-	background-color:#D7D0C6;
-	
-}
-/*bg3==================*/
-.contents.bg3 {
-	background-color:#CED9D0;
-}
-/*bg4==================*/
-.contents.bg4 {
-	background-color:#D0D0DA;
-}
-/*bg5==================*/
-.contents.bg5 {
-	background-color:#E8F7EE;
-}
-/*h2見出し*/
-.contents h2 {
-	font-size: 40px;
-	margin-bottom: 20px;
-	text-align: center;
-	letter-spacing: 0.2em;
-	color: #333;
+	padding: 32px 15% 0 15%;	/*余白。上、右、下、左。*/
+	background-color: #F7FDFA;
 }
 
 
-/*h2見出しの上の装飾*/
- /*.contents h2::before {
-	content: "*+ﾟ";	
-	display: block;
-	text-shadow: 20px 10px 0px rgba(255,255,255,0.5);
 }
-*/
+
+
+
 /*h2見出し内のspanタグ*/
-.contents h2 span {
+.contents span {
 	display: block;
-	font-size: 12px;	/*文字サイズ*/
+	font-size: 12px;
+	/*文字サイズ*/
 }
 /*h3見出し*/
-.contents h3 {
-	clear: both;
-	margin-top: 50px;
-	margin-bottom: 20px;
-	letter-spacing: 0.1em;
-	background: #fff;
-	background: rgba(255,255,255,0.3);
-	text-align: center;
-	border-radius: 30px;
-	padding: 0px 20px;
-}
+
 /*段落タグ*/
 .contents p {
 	padding: 0 30px 20px;		/*上、左右、下への余白*/
@@ -197,7 +213,7 @@ footer {
 	clear: both;
 	text-align: center;
 	padding: 20px;
-	background-color:#F4F4F4;
+	background-color:#F7FDFA
 }
 footer a {text-decoration: none;}
 footer .pr {display: block;}
