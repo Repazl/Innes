@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>YK-Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Webポートフォリオ">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fixmenu_pagetop.css">
+  
+  <script type="text/javascript" src="js/openclose.js"></script>
+  <script type="text/javascript" src="js/fixmenu_pagetop.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+    $('a[href^="#"]').click(function() {
+    var speed = 800;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+    });
+    });
+  </script>
+</head>
+
+
+<body>
+  
+  <div id="container">
+    <!--gazou＝
+    <div id="mainimg">メインイメージ</div>
+    ＝＝-->
+    <header>
+      <!--<h1 class="title">タイトル</h1>-->
+      <nav class="nav">
+        <ul class="menu-group">
+          <li class="menu-item"><a href="index.html">Home</a></li>
+          <li class="menu-item"><a href="works.html">Works</a></li>
+          <li class="menu-item"><a href="about.html">About</a></li>
+          <li class="menu-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!--bg1＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+    <div class="contents bg5" id="Freelance">
+      
+      <section>
+        <br>
+        <h2><span>
+        Freelance</span></h2>
+        
+        <p>
+          
+          
+          
+          <div class="gazo">
+            <a href="fr_iri.html" class="card">
+              <img src="images/thumb/kn.png" alt="">
+              <span class="cardTitle">
+                配信サムネイル
+              </span>
+              <br>
+              <span class="cardRole">
+                グラフィック
+              </span>
+            </a>
+          </div>
+          
+          <div class="gazo">
+            <a href="fr_liz.html" class="card">
+              <img src="images/thumb/liz.png" alt="">
+              <span class="cardTitle">
+                グレースケール版ロゴ
+              </span>
+              <br>
+              <span class="cardRole">
+                グラフィック
+              </span>
+            </a>
+          </div>
+          
+          
+          
+        </p>
+        
+        
+      </section>
+    </div>
+    
+    <!--works/bg2＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+    <div class="contents bg5" id="Aniquep">
+      
+      <section>
+        <br>
+        <h2><span>Anique</span></h2><span>Anique株式会社でやったこと</span>
+        
+        <p>
+          <!--
+          <div class="gazo">
+            <a href="an_cloudear.html" class="card">
+              <img src="images/thumb/an_aotl.png" alt="">
+              <span class="cardTitle">
+                CLOUDEAR
+              </span>
+              <br>
+              <span class="cardRole">
+                UX,UI
+              </span>
+            </a>
+          </div>
+          -->
+          
+          
+          
+          <div class="gazo">
+            <a href="an_banner.html" class="card">
+              <img src="images/thumb/an_banner.png" alt="">
+              <span class="cardTitle">
+                提案用バナー、サイトUI
+              </span>
+              <br>
+              <span class="cardRole">
+                グラフィック
+              </span>
+            </a>
+          </div>
+          
+          <div class="gazo">
+            <a href="an_usa.html" class="card">
+              <img src="images/thumb/Untitled.png" alt="">
+              <span class="cardTitle">
+                Anique USA コーポレートサイト
+              </span>
+              <br>
+              <span class="cardRole">
+                コーディング
+              </span>
+            </a>
+          </div>
+          
+          <div class="gazo">
+            <a href="an_aotl.html" class="card">
+              <img src="images/thumb/an_aotl.png" alt="">
+              <span class="cardTitle">
+                Attack on Titan Legacy
+              </span>
+              <br>
+              <span class="cardRole">
+                動画
+              </span>
+            </a>
+          </div>
+          <!--
+          <div class="gazo">
+            <a href="aotl.html" class="card">
+              <img src="images/thumb/an_aotl.png" alt="">
+              <span class="cardTitle">
+                アニメグッズ
+              </span>
+              <br>
+              <span class="cardRole">
+                入稿データ作成
+              </span>
+            </a>
+          </div>
+          -->
+        </p>
+        
+        
+        </section>
+      </div>
+    <!--works/bg2＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+    <div class="contents bg2" id="works">
+      
+      <section>
+        <br>
+        <h2><span>School days</span></h2><span>学生時代の課題・自主制作・サークル活動など</span>
+        
+        
+        
+        <div>
+          <p>
+            <div class="gazo">
+              <a href="un_crosscord.html" class="card" >
+                <img src="images/thumb/cc.png" alt="">
+                <span class="cardTitle">
+                  CrossCord
+                </span> 
+                <br>
+                <span class="cardRole">
+                  サービスデザイン
+                </span>
+              </a>
+            </div>
+            
+            <div class="gazo">
+              <a href="un_biripeta.html" class="card">
+                <img src="images/thumb/bp.png" alt="">
+                <span class="cardTitle">
+                  新しい工作の広場 ビリー&ペーター
+                </span>
+                <br>
+                <span class="cardRole">
+                  ブランディング, UI
+                </span>
+              </a>
+            </div>
+            
+            <!--
+            <div class="gazo">
+              <a href="work/crosscord.html" class="card" >
+                <img src="images/sample1.jpg" alt="">
+                <span class="cardTitle">
+                  新しい天気アプリ
+                </span> 
+                <br>
+                <span class="cardRole">
+                  サービス,UI
+                </span>
+                
+              </a>
+            </div>
+            -->
+            
+            
+          </p>
+        </div>
+        
+        <p>
+          <div class="gazo">
+            <a href="un_tanpopo.html" class="card">
+              <img src="images/thumb/tnpp.png" alt="">
+              <span class="cardTitle">
+                たんぽぽ
+              </span>
+              <br>
+              <span class="cardRole">
+                プログラミング
+              </span>
+              
+            </a>
+          </div>
+          
+        </p>
+        
+        
+        <!--
+        <div class="clear" ><h3>紙もの/アナログ</h3></div>
+        <p>
+        
+          <div class="gazo">
+            <a href="pamphlet.html" class="card">
+              <img src="images/thumb/pamp.png" alt="">
+              <span class="cardTitle">
+                芸術祭2019パンフレット
+              </span>
+              <br>
+              <span class="cardRole">
+                パンフレット
+              </span>
+              
+            </a>
+            </div>
+        
+        -->
+        
+        
+        
+      </p>
+     
+    </section>
+    
+    
+  </div>
+  
+  
+  
+  
+  
+  
+  <footer>
+    <small>©️2024 _ Innes</small>
+  </footer>
+  
+  <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+  
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>YK-Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style02.css">
+<link rel="stylesheet" href="css/swiper.css">
+<link rel="stylesheet" href="css/fixmenu_pagetop.css">
+        <script type="text/javascript" src="js/openclose.js"></script>
+        <script type="text/javascript" src="js/fixmenu_pagetop.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+                $(function(){
+                $('a[href^="#"]').click(function() {
+                var speed = 800;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $('body,html').animate({scrollTop:position}, speed, 'swing');
+                return false;
+                });
+                });
+        </script>
+</head>
+
+<body>
+
+        <div class="header cc">
+        </div>
+        
+
+<div id="container">
+                <header>
+                        <!--<h1 class="title">タイトル</h1>-->
+                        <nav class="nav">
+                                <ul class="menu-group">
+                                        <li class="menu-item"><a href="index.html">Home</a></li>
+                                        <li class="menu-item"><a href="works.html">Works</a></li>
+                                        <li class="menu-item"><a href="about.html">About</a></li>
+                                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                </ul>
+                        </nav>
+                </header>
+<div id="contents">
+
+
+
+<section>
+
+
+<h2>Cross Cord</h2>
+
+<h3>2020年12月 - 2021年2月</h3>
+<p>
+                        2021年冬のビビビット展に出展した作品。<br>
+                        CrossCordは絵は描けるけどアイデアが浮かばない、ゲームの企画は考えたけど実装ができない、
+                        と制作に行き詰まっている人たちが出会い共同作業ができるクリエイターの集い場を提供するサービスです。
+                        特徴はアプリ内通貨を導入し、依頼人と請負人の関係になったり、質問者と回答者になったり、応援したいクリエイターに
+                        投げ銭できたり、現実世界では知り合う機会が少ない分野のひとたちともコミュニケーションがとれることです。
+                        
+                        
+                    </p>
+                    
+                    <p>
+                        
+                        <br>
+                        <span class="Role">
+                            担当
+                        </span><br>
+                        個人制作
+</p>
+
+                    
+                    
+<h4>概要</h4>
+                                <p>プレゼンテーションで使用したスライドの一部です。</p>
+<div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="images/cc/crossc02.png" alt="Swiper01"></div>
+                                                <div class="swiper-slide"><img src="images/cc/crossc03.png" alt="Swiper02"></div>
+                                                <div class="swiper-slide"><img src="images/cc/crossc04.png" alt="Swiper03"></div>
+                                                <div class="swiper-slide"><img src="images/cc/crossc05.png" alt="Swiper03"></div>
+                                                <div class="swiper-slide"><img src="images/cc/crossc06.png" alt="Swiper03"></div>
+
+         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+                                        
+</div>
+<script src="js/swiper.js"></script>
+<script>
+                                        var swiper = new Swiper('.swiper-container', {
+                                        navigation: {
+                                        nextEl: '.swiper-button-next',
+                                        prevEl: '.swiper-button-prev',
+                                        },
+                                        loop: true,
+                                        pagination: {
+                                        el: '.swiper-pagination',
+                                        type: 'bullets',
+                                        clickable: true,
+                                        },
+                                        loop: true,
+                                        });
+</script>
+
+<p></p>
+<h4>制作過程</h4>
+                                <p>ビビビット展に展示するにあたり、miroとdiscordを使用してメンターさんからフィードバックをいただきながら制作しました。<br>
+                                miro以外でもやりとりをしているためラフスケッチなどは全てではないですが制作過程を詳しく見ることができます
+                                        (実際に使ったもののコピーです)。
+                                ページが重いので閲覧の際には注意してください。</p>
+                                <p>外部リンク→<a href="https://miro.com/app/board/o9J_l4CGzqQ=/" target="_blank" rel="noopener"> miro </a></p>
+                                
+<h4></h4>
+
+                                <p><br>
+                                </p>
+</section>
+
+
+
+
+
+</div>
+<!--/#contents-->
+
+            <footer>
+                <small>©️2024 _  <a href="index.html">Innes</a></small>
+        </footer>
+            
+
+<!--ページの上部に戻る「↑」ボタン
+                <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+                
+                <div class="home">
+                        <a href="index.html" >
+                                <img src="images/home.svg" alt="">
+                        </a>
+                </div>-->
+                
+</div>
+<!--/#container-->
+
+</body>
+</html>

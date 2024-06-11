@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>YK-Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style02.css">
+<link rel="stylesheet" href="css/swiper.css">
+<link rel="stylesheet" href="css/fixmenu_pagetop.css">
+        <script type="text/javascript" src="js/openclose.js"></script>
+        <script type="text/javascript" src="js/fixmenu_pagetop.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+        <script>
+                $(function(){
+                $('a[href^="#"]').click(function() {
+                var speed = 800;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $('body,html').animate({scrollTop:position}, speed, 'swing');
+                return false;
+                });
+                });
+        </script>
+        
+</head>
+
+<body>
+
+        <div class="header tnpp">
+        </div>
+        
+
+<div id="container">
+                <header>
+                        <!--<h1 class="title">タイトル</h1>-->
+                        <nav class="nav">
+                                <ul class="menu-group">
+                                        <li class="menu-item"><a href="index.html">Home</a></li>
+                                        <li class="menu-item"><a href="works.html">Works</a></li>
+                                        <li class="menu-item"><a href="about.html">About</a></li>
+                                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                </ul>
+                        </nav>
+                </header>
+<div id="contents">
+
+
+
+<section>
+
+
+<h2>たんぽぽ</h2>
+
+<h3>2019年12月</h3>
+<p>
+                        学科の授業(CGプログラミング基礎)で制作した作品。<br>
+                        課題はProcessingで再帰を用いて美しいグラフィックを作成すること。
+                        
+                        
+                    </p>
+                    
+                    <p>
+                        
+                        <br>
+                        <span class="Role">
+                            担当
+                        </span><br>
+                        個人制作/プログラミング
+</p>
+
+                    
+                    
+
+
+<p></p>
+<h4>プロセス</h4>
+                                <p>再帰が使えそうなものとして枝分かれしているモチーフを考え、たんぽぽを作ってみることにしました。
+                                        思い立ったらまず手を動かすタイプなので
+                                うまく作れなければ他のモチーフにしようと思っていましたが、想像通りに綺麗に作ることができました。
+                                茎や種を二色で表現して立体感をだしたり、
+                                綿毛は毛束の角度を指定したランダム表示で実物に近づけたりすることを工夫しました。</p>
+                                <p></p>
+                                
+
+                                <h4>実行結果</h4>
+                                <img src="images/tnpp/tnpp01.png">
+                                
+                                <h4>コード</h4>
+                                <div class="code">
+                                <p><pre class="prettyprint linenums">
+//JAVA
+void setup()
+{
+  size(1000, 1000);
+  colorMode(RGB, 256);
+
+  //背景グラデーション
+  noStroke();
+  color c1 = color(36, 83, 157);
+  color c2 = color(114, 207, 244);
+  for (float h = 0; h < height; h += 5) {
+    color c = lerpColor(c1, c2, h / height);
+    fill(c);
+    rect(0, h, width, 5);
+  }
+
+  //タネが生えるところ
+  fill( 170, 174, 150);
+  ellipse(670, 655, 50, 30);
+  //茎
+  strokeWeight(4);  
+  stroke(119, 74, 54);
+  line(669, 650, 698, 1001);
+  stroke(233, 203, 184);
+  line(672, 650, 704, 1001);
+  stroke(212, 224, 254, 98);
+
+  float angle=random(-100.0, -80.0);
+
+  //本体についてる綿
+  for (int i=0; i<360; i=i+20) {  
+    wata(1, angle+i, 670.0, 650.0, random(75, 80.0));
+    for (int n=0; n<8; n++) {
+      wata(1, angle+2+i, 670.0, 650.0, random(n*10.0, n*10.0+9.0));
+    }
+    stroke(119, 74, 54, 90);
+    wata(1, angle+10+i, 670.0, 650.0, random(10.0, 19.0));
+    wata(1, angle+10+i, 670.0, 650.0, random(5.0, 15.0));
+    stroke(212, 224, 254, 98);
+    wata(1, angle+2+i, 670.0, 650.0, random(5.0, 15.0));
+  }
+  wata(1, angle+40, 710.0, 600.0, 60.0);
+
+  //飛んでる綿
+  float wx, wy, oo;
+  for (int j=0; j<7; j++) {
+    wx =random(10, 980);
+    wy =random(50, 700-j*50);
+    oo=random(40, 60);
+    stroke(212, 224, 254, 80);
+    wata(1, angle+random(-20, 5+j), wx, wy, oo);
+    //飛んでるタネ
+    noStroke();
+    fill(189, 164, 132);
+    ellipse(wx, wy, 4, 12);
+    fill(233, 203, 184);
+    ellipse(wx+1, wy-1, 2, 6);
+  }  
+  ellipse(710.0, 600.0, 4, 10);
+}
+
+//綿毛
+void wata(int lev, float angle, float xs, float ys, float stem)
+{
+  float l1, r1, c1, xe, ye;
+
+  //終点座標
+  xe=stem*cos(radians(angle))-1.0*sin(radians(angle))+xs;
+  ye=stem*sin(radians(angle))+1.0*cos(radians(angle))+ys;
+
+  strokeWeight(1.1);
+  line(xs, ys, xe, ye);
+  if (lev>0) {
+
+    //長さ
+    stem=sqrt(pow(xe-xs, 2)+pow(ye-ys, 2))*0.5;
+
+    //現在の終点座標（xe, ye）を、次の枝の始点座標（xs, ys）とする
+    xs=xe; 
+    ys=ye;
+
+    strokeWeight(0.5);
+
+    //再帰呼び出し
+    for (int l=0; l<13; l++) {
+      l1 = angle+random(90.0, 130.0); 
+      wata(lev-1, l1, xs, ys, stem);
+
+      r1 = angle-random(70.0, 120.0) +random(30); 
+      wata(lev-1, r1, xs, ys, stem);
+
+      c1 = angle-random(-40, 45)+random(30);
+      wata(lev-1, c1, xs, ys, stem);
+    }
+  }
+}
+
+
+</pre></p></div>
+                                <h4></h4>
+                                
+                                <p><br>
+                                </p>
+</section>
+
+
+
+
+
+</div>
+<!--/#contents-->
+
+            <footer>
+                <small>©️2024 _  <a href="index.html">Innes</a></small>
+        </footer>
+            
+
+<!--ページの上部に戻る「↑」ボタン
+                <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+                
+                <div class="home">
+                        <a href="index.html" >
+                                <img src="images/home.svg" alt="">
+                        </a>
+                </div>-->
+                
+</div>
+<!--/#container-->
+
+</body>
+</html>
